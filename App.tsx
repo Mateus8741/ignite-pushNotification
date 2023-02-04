@@ -1,4 +1,5 @@
 import { StatusBar } from 'react-native';
+import OneSignal from 'react-native-onesignal';
 import { NativeBaseProvider } from 'native-base';
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 
@@ -8,6 +9,8 @@ import { THEME } from './src/theme';
 import { Loading } from './src/components/Loading';
 
 import { CartContextProvider } from './src/contexts/CartContext';
+
+OneSignal.setAppId('eb00e1e0-3c24-44b2-8d0c-3dfd3066c670')
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
